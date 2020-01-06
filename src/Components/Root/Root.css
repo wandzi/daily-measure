@@ -1,0 +1,68 @@
+.root-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-color: #36B5B0;
+  color: #FFFFFF;
+}
+.info-btn {
+  position: absolute !important;
+  top: 4px;
+  right: 4px;
+  color: #FFFFFF;
+  font-size: 3rem !important;
+}
+.logo-container {
+  display: flex;
+  align-content: center; 
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 13px;
+}
+.logo {
+  margin-bottom: 20px;
+  height: 100px;
+}
+.logo-container > h2 {
+  font-size: 4.6rem;
+  margin-bottom: 0px;
+}
+.kicker {
+  margin: 0;
+  font-size: 1.4rem;
+}
+.signin-btn {
+  padding: 0px !important;
+  width: 160px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  border-color: #E9605E;
+  background-color: #E9605E;
+  color: #FFFFFF;
+  font-family: inherit;
+  outline: none;
+}
+.signin-btn:hover {
+  color: #FFFFFF;
+  border-color: #E6504D;
+  background-color: #E6504D;
+}
+.signup-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.signup-container > p {
+  margin: 0;
+  font-size: 1.2rem;
+}
+.signup-container > .signup-btn {
+  margin-left: 10px;
+  font-size: 1.2rem;
+  color: #FFFFFF;
+}

@@ -1,12 +1,16 @@
 import React from 'react';
 import './App.css';
-import 'materialize-css/dist/css/materialize.min.css';
-import Navbar from './Components/Layout/Navbar/Navbar';
+import { Switch, Route } from 'react-router-dom';
+import Root from './Components/Root/Root';
+import Signin from './Components/Signin/Signin';
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      <Switch>
+        <Route exact path="/" component={Root}/>
+        <Route exact path="/signin" component={Signin}/>
+      </Switch>
     </div>
   );
 }
