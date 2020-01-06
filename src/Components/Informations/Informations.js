@@ -22,7 +22,9 @@ const Informations = () => {
              I'm looking for my first job as Junior Frontend Dveloper.
         </p>
         <br />
-        <p>I'm really keen on about Web Development becouse of you can create from nothing something unique that can also helps people.</p>
+        <p>I'm really keen on about Web Development becouse of you can create from nothing something unique that can also helps people. Moreover you are still learning new things needed to correctly implement application.
+           For example by writing this App I had to make a research about Blood Pressure Results. Need to find out about dependences between Diastole and Systole blood pressure. 
+        </p>
         <br />
         <p>
         I get an idea to create <img className="mini-logo" src="./img/blood-drop.png" alt="logo"/>dailyMeasure

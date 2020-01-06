@@ -1,0 +1,13 @@
+.last-measure-result {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 60px;
+    padding: 50px;
+    border-radius: 50%;
+    background-color: rgb(12, 206, 86);
+}
+.last-measure-result > h1, p {
+    margin: 0;
+}
