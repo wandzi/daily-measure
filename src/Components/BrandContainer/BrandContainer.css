@@ -1,0 +1,18 @@
+.brand-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100px;
+    margin-bottom: 55px;
+}
+.brand-container > .logo {
+    vertical-align: middle;
+    margin-bottom: 0;
+    width: 50px;
+    height: auto;
+}
+.brand-container > h1 {
+    font-size: 4.5rem;
+    color: #FFFFFF;
+}

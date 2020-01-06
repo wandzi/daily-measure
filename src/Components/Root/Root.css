@@ -5,7 +5,7 @@
   flex-direction: column;
   width: 100vw;
   height: 100vh;
-  background-color: #36B5B0;
+  background: linear-gradient(135deg, #5DD1CD, #116B68);
   color: #FFFFFF;
 }
 .info-btn {
@@ -54,15 +54,25 @@
 .signup-container {
   display: flex;
   align-items: center;
+  align-content: space-around;
   justify-content: center;
-  flex-direction: row;
 }
 .signup-container > p {
   margin: 0;
   font-size: 1.2rem;
 }
-.signup-container > .signup-btn {
-  margin-left: 10px;
-  font-size: 1.2rem;
-  color: #FFFFFF;
+.signup-container > a {
+  margin: 0;
+  padding: 0;
+}
+.signup-container > p > a > .signup-btn {
+  padding: 0 !important;
+  margin-left: 8px;
+  vertical-align: center;
+  font-size: 1.2rem !important;
+  text-transform: none;
+  text-decoration: underline;
+  color: #FFFFFF !important;
+  border: none;
+  line-height: 0 !important;
 }
