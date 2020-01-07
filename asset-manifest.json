@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/daily-measure/static/css/main.bc3f8efc.chunk.css",
-    "main.js": "/daily-measure/static/js/main.7ef2e2ff.chunk.js",
-    "main.js.map": "/daily-measure/static/js/main.7ef2e2ff.chunk.js.map",
+    "main.js": "/daily-measure/static/js/main.f5bc9cc6.chunk.js",
+    "main.js.map": "/daily-measure/static/js/main.f5bc9cc6.chunk.js.map",
     "runtime-main.js": "/daily-measure/static/js/runtime-main.f2b230de.js",
     "runtime-main.js.map": "/daily-measure/static/js/runtime-main.f2b230de.js.map",
     "static/js/2.e08ac209.chunk.js": "/daily-measure/static/js/2.e08ac209.chunk.js",
     "static/js/2.e08ac209.chunk.js.map": "/daily-measure/static/js/2.e08ac209.chunk.js.map",
     "index.html": "/daily-measure/index.html",
-    "precache-manifest.542cbf513d30d25a1b2a7b04ff48fa17.js": "/daily-measure/precache-manifest.542cbf513d30d25a1b2a7b04ff48fa17.js",
+    "precache-manifest.758a2881188fcb7ad6cb331a455aa323.js": "/daily-measure/precache-manifest.758a2881188fcb7ad6cb331a455aa323.js",
     "service-worker.js": "/daily-measure/service-worker.js",
     "static/css/main.bc3f8efc.chunk.css.map": "/daily-measure/static/css/main.bc3f8efc.chunk.css.map",
     "static/js/2.e08ac209.chunk.js.LICENSE": "/daily-measure/static/js/2.e08ac209.chunk.js.LICENSE"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.f2b230de.js",
     "static/js/2.e08ac209.chunk.js",
     "static/css/main.bc3f8efc.chunk.css",
-    "static/js/main.7ef2e2ff.chunk.js"
+    "static/js/main.f5bc9cc6.chunk.js"
   ]
 }
