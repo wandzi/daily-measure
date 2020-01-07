@@ -13,7 +13,7 @@ const Root = () => {
             <p className="kicker">Your free blood preasure diary!</p>
             <a href="/signin"><button className="appBtn">Sign-in</button></a>
             <div className="signup-container">
-                <p>Don't have an account?<NavLink to="/Application"><button className="signup-btn">Sign-up</button></NavLink></p>
+                <p>Don't have an account?<NavLink to="/signup"><button className="signup-btn">Sign-up</button></NavLink></p>
             </div>
         </div>
     );

@@ -1,4 +1,37 @@
-.asd {
+.add-measure-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     width: 100vw;
-    background-color: violet;
+    height: 100vh;
+    background: linear-gradient(135deg, #5DD1CD, #116B68);
+}
+.add-measure {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    color: #FFFFFF;
+}
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.spinner-container > .material-icons {
+    margin: 0 auto;
+    cursor: pointer;
+    font-size: 5rem;
+}
+.spinner-container > h1, p {
+    margin: 0 auto;
+}
+.name-pressure-label {
+    margin-top: 20px;
+    font-size: 2.8rem;
+}
+.measure-date {
+    margin-top: 40px;
+    color: #FFFFFF;
 }
