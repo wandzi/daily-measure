@@ -6,7 +6,22 @@
     margin-top: 60px;
     padding: 50px;
     border-radius: 50%;
-    background-color: rgb(12, 206, 86);
+    background-color: #0CCE56;  
+    z-index: 2;
+}
+.last-measure-result:hover {    
+    background-color: rgb(27, 197, 92);  
+}
+.last-measure-result:after {
+    position: absolute;
+    width: 24%;
+    height: 2%;
+    bottom: 7%;
+    border-radius: 50%;
+    z-index: 1;
+    margin: 0 auto;
+    content: "";
+    background: radial-gradient(#2c2c2c4f, 50%, rgba(0, 0, 0, 0));
 }
 .last-measure-result > h1, p {
     margin: 0;

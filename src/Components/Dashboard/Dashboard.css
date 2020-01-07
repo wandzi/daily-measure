@@ -1,14 +1,12 @@
-.home-container {
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(135deg, #5DD1CD, #116B68);
-    color: #FFFFFF;
-}
 .dashboard {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, #5DD1CD, #116B68);
+    color: #FFFFFF;
 }
 .dashboard > .my-photo {
     width: 100px;

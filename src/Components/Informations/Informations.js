@@ -1,10 +1,12 @@
 import React from 'react';
 import './Informations.css';
+import { NavLink } from 'react-router-dom';
 import BrandContainer from '../BrandContainer/BrandContainer';
 
 const Informations = () => {
   return (
     <div className="informations-container">
+        <NavLink to="/"><i className="material-icons back-arrow">arrow_back</i></NavLink>
         <img src="./img/me.png" alt="logo" className="my-photo"/>
         <h1>Hello!</h1>
         <p>Probably you came here to see some informations about <img className="mini-logo" src="./img/blood-drop.png" alt="logo"/>dailyMeasure, but first let me introduce myself.</p>

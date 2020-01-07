@@ -8,6 +8,15 @@
     background: linear-gradient(135deg, #5DD1CD, #116B68);
     color: #FFFFFF;
 }
+.back-arrow {
+    font-size: 3rem;
+}
+.informations-container > a {
+    position: absolute !important;
+    top: 3px;
+    left: 3px;
+    color: #FFFFFF;
+}
 .my-photo {
     margin-top: 100px;
     width: 200px;
