@@ -34,7 +34,7 @@
   margin: 0;
   font-size: 1.4rem;
 }
-.appBtn {
+.app-btn {
   padding: 0px !important;
   width: 160px;
   margin-top: 50px;
@@ -46,7 +46,7 @@
   font-family: inherit;
   outline: none;
 }
-.appBtn:hover {
+.app-btn:hover {
   color: #FFFFFF;
   border-color: #E6504D;
   background-color: #E6504D;

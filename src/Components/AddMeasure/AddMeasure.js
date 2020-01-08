@@ -33,8 +33,9 @@ const AddMeasure = () => {
                     </div>
 
                 </div>
+                <input type="text" placeholder="Short description.." className="description-input"></input>
                 <p className="measure-date" id="measureDateContainer">07.01.2019 - 12:45</p>
-                <button className="appBtn"><i className="material-icons menu-item">add</i>Add</button>
+                <button className="app-btn"><i className="material-icons menu-item">add</i>Add</button>
             </div>
     );
 }

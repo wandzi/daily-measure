@@ -30,10 +30,10 @@ class Nav extends Component {
                     <i className="material-icons closebtn" onClick={this.toggleNav}>close</i>
                     <div className="overlay-content">
                         <BrandContainer />
-                        <NavLink to="/dashboard" onClick={this.toggleNav} className="appBtn"><i className="material-icons menu-item">dashboard</i>Dashboard</NavLink>
-                        <NavLink to="/addmeasure" onClick={this.toggleNav} className="appBtn"><i className="material-icons menu-item">add</i>Add measure</NavLink>
-                        <NavLink to="/measurement" onClick={this.toggleNav} className="appBtn"><i className="material-icons menu-item">insert_chart</i>Measurement</NavLink>
-                        <NavLink to="/" onClick={this.toggleNav} className="appBtn"><i className="material-icons menu-item">exit_to_app</i>Sign-out</NavLink>
+                        <NavLink to="/dashboard" onClick={this.toggleNav} className="app-btn"><i className="material-icons menu-item">dashboard</i>Dashboard</NavLink>
+                        <NavLink to="/addmeasure" onClick={this.toggleNav} className="app-btn"><i className="material-icons menu-item">add</i>Add measure</NavLink>
+                        <NavLink to="/measurement" onClick={this.toggleNav} className="app-btn"><i className="material-icons menu-item">insert_chart</i>Measurement</NavLink>
+                        <NavLink to="/" onClick={this.toggleNav} className="app-btn"><i className="material-icons menu-item">exit_to_app</i>Sign-out</NavLink>
                     </div>
                 </div>
             </>

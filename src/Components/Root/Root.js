@@ -11,7 +11,7 @@ const Root = () => {
                 <h2>dailyMeasure</h2>
             </div>
             <p className="kicker">Your free blood preasure diary!</p>
-            <a href="/signin"><button className="appBtn">Sign-in</button></a>
+            <NavLink to="/signin"><button className="app-btn">Sign-in</button></NavLink>
             <div className="signup-container">
                 <p>Don't have an account?<NavLink to="/signup"><button className="signup-btn">Sign-up</button></NavLink></p>
             </div>

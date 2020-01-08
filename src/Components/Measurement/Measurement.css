@@ -1,0 +1,28 @@
+.measurement-container, .result-measure-blood-pressure, .result-measure-pulse, .result-measure-info, .measure-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 60vw;
+}
+.measurement-container {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, #5DD1CD, #116B68);
+    color: #FFFFFF;
+}
+.measure {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 95vw;
+    margin-top: 20px;
+}
+.measure-status {
+    height: 70px;
+    width: 70px;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: #33AF1A;
+}

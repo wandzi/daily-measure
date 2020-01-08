@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Switch, Route } from 'react-router-dom';
+import { HashRouter, Switch, Route } from 'react-router-dom';
 import Root from './Components/Root/Root';
 import Signin from './Components/Signin/Signin';
 import Signup from './Components/Signup/Signup';
@@ -12,17 +12,19 @@ import Measurement from './Components/Measurement/Measurement';
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Switch>
-          <Route exact path="/" component={Root}/>
-          <Route path="/signin" component={Signin}/>
-          <Route path="/signup" component={Signup}/>
-          <Route path="/informations" component={Informations}/>
-          <Route path="/dashboard" component={Application}/>
-          <Route path="/addmeasure" component={AddMeasure}/>
-          <Route path="/measurement" component={Measurement}/>
-        </Switch>
-      </div>
+      <HashRouter basename='/'>
+        <div className="App">
+          <Switch>
+            <Route exact path="/" component={Root}/>
+            <Route path="/signin" component={Signin}/>
+            <Route path="/signup" component={Signup}/>
+            <Route path="/informations" component={Informations}/>
+            <Route path="/dashboard" component={Application}/>
+            <Route path="/addmeasure" component={AddMeasure}/>
+            <Route path="/measurement" component={Measurement}/>
+          </Switch>
+        </div>
+      </HashRouter>
     );
   }
 }
