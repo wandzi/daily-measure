@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/daily-measure/static/css/main.99032c5a.chunk.css",
+    "main.css": "/daily-measure/static/css/main.4fd37eb0.chunk.css",
     "main.js": "/daily-measure/static/js/main.4dddd364.chunk.js",
     "main.js.map": "/daily-measure/static/js/main.4dddd364.chunk.js.map",
     "runtime-main.js": "/daily-measure/static/js/runtime-main.f2b230de.js",
@@ -8,15 +8,15 @@
     "static/js/2.8d5eb654.chunk.js": "/daily-measure/static/js/2.8d5eb654.chunk.js",
     "static/js/2.8d5eb654.chunk.js.map": "/daily-measure/static/js/2.8d5eb654.chunk.js.map",
     "index.html": "/daily-measure/index.html",
-    "precache-manifest.871863d31f54aa35f9749d0298166aae.js": "/daily-measure/precache-manifest.871863d31f54aa35f9749d0298166aae.js",
+    "precache-manifest.238e0c88bd247251cb762db69072dd00.js": "/daily-measure/precache-manifest.238e0c88bd247251cb762db69072dd00.js",
     "service-worker.js": "/daily-measure/service-worker.js",
-    "static/css/main.99032c5a.chunk.css.map": "/daily-measure/static/css/main.99032c5a.chunk.css.map",
+    "static/css/main.4fd37eb0.chunk.css.map": "/daily-measure/static/css/main.4fd37eb0.chunk.css.map",
     "static/js/2.8d5eb654.chunk.js.LICENSE": "/daily-measure/static/js/2.8d5eb654.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.f2b230de.js",
     "static/js/2.8d5eb654.chunk.js",
-    "static/css/main.99032c5a.chunk.css",
+    "static/css/main.4fd37eb0.chunk.css",
     "static/js/main.4dddd364.chunk.js"
   ]
 }
