@@ -16,6 +16,7 @@ class AddMeasure extends Component {
         };
         this.increaseValue = this.increaseValue.bind(this);
         this.decreaseValue = this.decreaseValue.bind(this);
+        this.submitMeasure = this.submitMeasure.bind(this);
     }
     componentDidMount() {
         this.intervalID = setInterval(
@@ -38,14 +39,20 @@ class AddMeasure extends Component {
         const name = event.target.getAttribute('name');
         this.setState({ [name]: this.state[name] + 1 });
     }
+
     decreaseValue = (event) => {
         const name = event.target.getAttribute('name');
         this.setState({ [name]: this.state[name] - 1 });
     }
+
     handleChange= (event) => {
         this.setState({
             description: event.target.value,
         })
+    }
+
+    submitMeasure = () => {
+        this.props.addMeasure(this.state);
     }
 
     render() {
@@ -81,7 +88,7 @@ class AddMeasure extends Component {
                 </div>
                 <input className="description-input" type="text" placeholder="Short description.." onChange={this.handleChange}></input>
                 <p className="measure-date" id="measureDateContainer">{this.state.date}</p>
-                <button className="app-btn"><i className="material-icons menu-item">add</i>Add</button>
+                <button className="app-btn"><i className="material-icons menu-item" onClick={this.submitMeasure}>add</i>Add</button>
             </div>
         );
     }

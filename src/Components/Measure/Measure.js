@@ -15,7 +15,7 @@ const Measure = ({measure}) =>{
             </div>  
             <div className="result-measure-info">
             <p className="result-measure-description">{measure.description}</p>
-                <p className="result-measure-date">{measure.day}.{measure.month}.{measure.year}r. - {measure.hour}:{measure.minutes}</p>
+                <p className="result-measure-date">{measure.date}</p>
             </div>
         </div>     
     )
