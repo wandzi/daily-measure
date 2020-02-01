@@ -4,12 +4,22 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom'
-import { createStore, applyMiddleware} from 'redux';
+import { createStore, applyMiddleware, compose} from 'redux';
 import rootReducer from './Store/Reducers/rootReducer';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
+import { reduxFirestore, getFirestore } from 'redux-firestore';
+import { reactReduxFirebase, getFiresbase } from 'react-redux-firebase';
+import firebaseConfig from './Config/firebaseConfig';
 
-const store = createStore(rootReducer, applyMiddleware(thunk));    
+
+const store = createStore(rootReducer, 
+    compose(
+        applyMiddleware(thunk.withExtraArgument({ getFiresbase, getFirestore })),
+        reduxFirestore(firebaseConfig),
+        reactReduxFirebase(firebaseConfig),
+    )
+);    
 
 ReactDOM.render(
     
