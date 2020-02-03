@@ -10,7 +10,6 @@ export const addMeasure = (measure) => {
             date: new Date(),
         }).then(() => {
             dispatch({type: 'ADD_MEASURE', measure});
-            
         }).catch((error) => {
             console.log(error);
         })

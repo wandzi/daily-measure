@@ -3,6 +3,8 @@ import './Measurement.css';
 import Nav from '../Nav/Nav';
 import Measure from '../Measure/Measure';
 import { connect } from 'react-redux';
+import { firestoreConnect } from 'react-redux-firebase';
+import { compose } from 'redux';
 
 class Measurement extends Component {
     render() {
@@ -21,8 +23,14 @@ class Measurement extends Component {
 }
 
 const mapStateToProps = (state) => {
+    console.log(state);
     return {
-        measurement: state.measurement.measurement
+        measurement: state.firestore.ordered.measurement
     }
 }
-export default connect(mapStateToProps)(Measurement)
+export default compose(
+    connect(mapStateToProps),
+    firestoreConnect([
+        { collection: 'measurement'}
+    ])
+)(Measurement)
