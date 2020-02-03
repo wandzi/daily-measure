@@ -26,6 +26,10 @@ form > input {
 form > input::placeholder {
     color: #FFFFFF !important;
 }
+.error {
+    color: #E6504D;
+    margin-bottom: 15px;
+}
 form > a > button {
     padding: 0px !important;
     width: 160px;

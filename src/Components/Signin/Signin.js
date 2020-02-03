@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './Signin.css';
 import { NavLink } from 'react-router-dom';
 import BrandContainer from '../BrandContainer/BrandContainer';
+import { connect } from 'react-redux';
+import { signIn } from '../../Store/Actions/authActions';
 
 class Signin extends Component {
     constructor(props) {
@@ -12,17 +14,18 @@ class Signin extends Component {
         }
     }
 
-    handleChange = (ev) => {
+    handleChange = (event) => {
         this.setState({
-            [ev.target.id]: ev.target.value,
+            [event.target.id]: event.target.value,
         });
     }
 
-    handleSubmit = (ev) => {
-        console.log(this.state);
+    handleSubmit = (event) => {
+        this.props.signIn(this.state);
     }
 
     render() {
+        const { authError } = this.props
         return (
             <div className="form-container">
                 <BrandContainer />
@@ -30,10 +33,23 @@ class Signin extends Component {
                 <form>
                     <input type="email" placeholder="Enter your email" id="email" onChange={this.handleChange}></input>
                     <input type="password" placeholder="Password" id="password" onChange={this.handleChange}></input>
+                    { authError ? <p className="error">{authError}</p> : null }
                     <NavLink to="/dashboard"><button onClick={this.handleSubmit}>Sign-in</button></NavLink>
                 </form>
             </div>
         );
     }
 }
-export default Signin
+
+const mapStateToProps = (state) => {
+    return {
+        authError: state.auth.authError
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        signIn: (creds) => dispatch(signIn(creds))
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Signin)
