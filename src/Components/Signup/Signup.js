@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './Signup.css';
 import { NavLink } from 'react-router-dom';
 import BrandContainer from '../BrandContainer/BrandContainer';
+import { Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 class Signup extends Component {
     constructor(props) {
@@ -25,6 +27,8 @@ class Signup extends Component {
     }
 
     render() {
+        const { auth } = this.props
+        if (auth.uid) return <Redirect to="/dashboard"/>
         return(
             <div className="form-container">
                 <BrandContainer />
@@ -42,4 +46,10 @@ class Signup extends Component {
     }
 }
 
-export default Signup
+const mapStateToProps = (state) => {
+    return {
+        auth: state.firebase.auth
+    }
+}
+
+export default connect()(Signup)
