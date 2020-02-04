@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Nav.css';
 import BrandContainer from '../BrandContainer/BrandContainer';
+import { connect } from 'react-redux';
+import { signOut } from '../../Store/Actions/authActions'
 
 class Nav extends Component {
     constructor(props) {
@@ -33,11 +35,24 @@ class Nav extends Component {
                         <NavLink to="/dashboard" onClick={this.toggleNav} className="app-btn"><i className="material-icons menu-item">dashboard</i>Dashboard</NavLink>
                         <NavLink to="/addmeasure" onClick={this.toggleNav} className="app-btn"><i className="material-icons menu-item">add</i>Add measure</NavLink>
                         <NavLink to="/measurement" onClick={this.toggleNav} className="app-btn"><i className="material-icons menu-item">insert_chart</i>Measurement</NavLink>
-                        <NavLink to="/" onClick={this.toggleNav} className="app-btn"><i className="material-icons menu-item">exit_to_app</i>Sign-out</NavLink>
+                        <NavLink to="/" onClick={() => {this.toggleNav(); this.props.signOut()}} className="app-btn"><i className="material-icons menu-item">exit_to_app</i>Sign-out</NavLink>
                     </div>
                 </div>
             </>
         );
     }
 }
-export default Nav 
+
+const mapStateToProps = (state) => {
+    return {
+        auth: state.firebase.auth
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        signOut: () => dispatch(signOut())
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Nav) 
