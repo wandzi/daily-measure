@@ -23,12 +23,16 @@ class Signin extends Component {
 
     handleSubmit = (event) => {
         this.props.signIn(this.state);
+
+    }
+
+    componentDidUpdate() {
+        const { auth } = this.props;
+        if (auth.uid) return <Redirect to="/dashboard"/>
     }
 
     render() {
-        const { authError, auth } = this.props
-        if (auth.uid) return <Redirect to="/dashboard"/>
-
+        const { authError } = this.props;
         return (
             <div className="form-container">
                 <BrandContainer />

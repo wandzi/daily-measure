@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import BrandContainer from '../BrandContainer/BrandContainer';
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { signUp } from '../../Store/Actions/authActions';
 
 class Signup extends Component {
     constructor(props) {
@@ -23,11 +24,12 @@ class Signup extends Component {
     }
 
     handleSubmit = (ev) => {
-        console.log(this.state);
+        this.props.signUp(this.state);
     }
 
     render() {
         const { auth } = this.props
+        console.log(auth);
         if (auth.uid) return <Redirect to="/dashboard"/>
         return(
             <div className="form-container">
@@ -52,4 +54,10 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect()(Signup)
+const mapDispatchToProps = (dispatch) => {
+    return {
+        signUp: (newUser) => dispatch(signUp(newUser))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Signup)
