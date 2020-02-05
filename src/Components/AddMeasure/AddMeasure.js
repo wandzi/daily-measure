@@ -53,6 +53,7 @@ class AddMeasure extends Component {
 
     submitMeasure = () => {
         this.props.addMeasure(this.state);
+        this.props.history.push('/dashboard');
     }
 
     render() {

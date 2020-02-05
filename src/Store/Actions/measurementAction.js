@@ -1,12 +1,13 @@
 export const addMeasure = (measure) => {
     return (dispatch, getState, { getFirebase, getFirestore }) => {
         const firestore = getFirestore();
+        const authorId = getState().firebase.auth.uid;
         firestore.collection('measurement').add({
             ...measure,
-            systolic: 444,
-            diastolic: 444,
-            pulse: 44,
-            description: 'ASD KASK',
+            systolic: measure.systolic,
+            diastolic: measure.diastolic,
+            pulse: measure.pulse,
+            description: measure.description,
             date: new Date(),
         }).then(() => {
             dispatch({type: 'ADD_MEASURE', measure});
