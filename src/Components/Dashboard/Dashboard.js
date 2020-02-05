@@ -10,12 +10,12 @@ import { Redirect } from 'react-router-dom';
 
 class Dashboard extends Component {
     render() {
-        const { projects, auth } = this.props
+        const { projects, auth, profile } = this.props
         if (!auth.uid) return <Redirect to="/"/>
         return(   
             <div className="dashboard">
                 <img src="./img/me.png" alt="logo" className="my-photo"/>
-                <h1>Welcome, Mateusz</h1>
+                <h1>Welcome, {profile.firstName}</h1>
                 <LastMeasureResult projects={projects}/>
             </div>
         );
@@ -26,6 +26,7 @@ class Dashboard extends Component {
 const mapStateToProps = (state) => {
     return {
         projects: state.firestore.ordered.projects,
+        profile: state.firebase.profile,
         auth: state.firebase.auth,
     }
 }
