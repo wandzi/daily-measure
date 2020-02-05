@@ -1,5 +1,6 @@
 import React from 'react';
 import './Measure.css';
+import moment from 'moment';
 
 
 const Measure = ({measure}) =>{
@@ -28,7 +29,7 @@ const Measure = ({measure}) =>{
             </div>  
             <div className="result-measure-info">
             <p className="result-measure-description">{measure.description}</p>
-                <p className="result-measure-date">{measure.date}</p>
+                <p className="result-measure-date">{moment(measure.date.toDate().toString()).format('lll')}</p>
             </div>
         </div>     
     )

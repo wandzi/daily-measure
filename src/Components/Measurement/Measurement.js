@@ -23,7 +23,6 @@ class Measurement extends Component {
 }
 
 const mapStateToProps = (state) => {
-    console.log(state);
     return {
         measurement: state.firestore.ordered.measurement
     }

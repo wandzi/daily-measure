@@ -6,8 +6,6 @@ import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 
-
-
 class Dashboard extends Component {
     render() {
         const { projects, auth, profile } = this.props

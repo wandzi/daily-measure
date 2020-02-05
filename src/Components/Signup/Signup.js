@@ -29,7 +29,6 @@ class Signup extends Component {
 
     render() {
         const { auth } = this.props
-        console.log(auth);
         if (auth.uid) return <Redirect to="/dashboard"/>
         return(
             <div className="form-container">
