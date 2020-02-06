@@ -3,6 +3,7 @@ import './AddMeasure.css';
 import Nav from '../Nav/Nav';
 import { connect } from 'react-redux';
 import { addMeasure } from '../../Store/Actions/measurementAction';
+import { auth } from 'firebase';
 
 class AddMeasure extends Component {
     constructor(props){
@@ -13,6 +14,7 @@ class AddMeasure extends Component {
             pulse: 80,
             description: '',
             date: new Date().toLocaleString(),
+            uid:'',
         };
         this.increaseValue = this.increaseValue.bind(this);
         this.decreaseValue = this.decreaseValue.bind(this);
@@ -95,7 +97,6 @@ class AddMeasure extends Component {
     }
 }
     
-
 const mapDispatchToProps = (dispatch) => {
     return {
         addMeasure: (measure) => dispatch(addMeasure(measure))

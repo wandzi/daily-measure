@@ -10,6 +10,7 @@ class Dashboard extends Component {
     render() {
         const { projects, auth, profile } = this.props
         if (!auth.uid) return <Redirect to="/"/>
+        console.log(this.props);
         return(   
             <div className="dashboard">
                 <img src="./img/me.png" alt="logo" className="my-photo"/>
@@ -31,6 +32,6 @@ const mapStateToProps = (state) => {
 export default compose(
     connect(mapStateToProps),
     firestoreConnect([
-        { collection: 'measurement' }
+        { collection: 'measurement'}
     ])
 )(Dashboard)

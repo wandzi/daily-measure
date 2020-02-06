@@ -9,6 +9,7 @@ export const addMeasure = (measure) => {
             pulse: measure.pulse,
             description: measure.description,
             date: new Date(),
+            uid: authorId,
         }).then(() => {
             dispatch({type: 'ADD_MEASURE', measure});
         }).catch((error) => {

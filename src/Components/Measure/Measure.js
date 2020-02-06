@@ -1,5 +1,6 @@
 import React from 'react';
 import './Measure.css';
+import { connect } from 'react-redux';
 import moment from 'moment';
 
 
@@ -16,7 +17,7 @@ const Measure = ({measure}) =>{
     } else if (measure.systolic > 140) {
         backgrounColor={backgroundColor: `#FF2929`};
     }
-
+    console.log(measure);
     return(
         <div className="measure">
             <div className='measure-status' style={backgrounColor}>
@@ -35,4 +36,11 @@ const Measure = ({measure}) =>{
     )
 }
 
-export default Measure
+const mapStateToProps = (state) => {
+    return {
+        auth: state.firebase.auth
+    }
+}
+
+
+export default connect(mapStateToProps, null)(Measure)
