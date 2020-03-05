@@ -1,3 +1,10 @@
+## Login
+
+Check the result, to login:
+
+Login: test@test.pl
+Password: test123
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
